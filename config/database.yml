@@ -1,0 +1,16 @@
+defaults: &defaults
+  adapter: postgis
+  database: jruby_test_dev
+  username: ir
+  password: 123123
+  encoding: utf_8
+  host: 127.0.0.1
+  postgis_extension: postgis
+  schema_search_path: '"$user", public, postgis'
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+  database: jruby_test_test
